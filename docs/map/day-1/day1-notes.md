@@ -53,33 +53,45 @@
   - Sachfragen: Eine niedrige Temperatur führt zu konsistenten, genauen Antworten.
   - Brainstorming: Eine höhere Temperatur kann verwendet werden, um vielfältige Ideen zu generieren.
 
-## Supervised Learning
-- This type of machine learning is like teaching a program by showing it examples with correct answers.
-- It works like having a teacher or supervisor guiding the machine, and can be taught of as training a function where both input parameters and the expected output (labels) are provided.
-- The algorithm learns to map inputs to outputs by analyzing these labeled examples.
-- Key characteristics:
-  - Labeled datasets: Each data point has both input features and a known output/target.
-  - Training process: The algorithm iteratively adjusts its parameters to minimize prediction errors.
-  - Validation: Accuracy can be measured by comparing predictions against known correct answers.
-  - Two main types:
-    - Classification: Predicting categories (e.g. spam vs. not spam, image recognition)
-    - Regression: Predicting continuous values (e.g. stock prices, housing prices)
-- Common algorithms: Linear/Logistic Regression, Decision Trees, Random Forest, Support Vector Machines, Neural Networks
-- Analogy: Writing a function that learns from a training dataset ***function(input, expected_output)*** to later predict ***function(new_input) -> predicted output.***
-- Practical examples: recommendation systems, fraud detection, medical diagnosis
+## Supervised Learning (Überwachtes Lernen)
+- Bei dieser Art des maschinellen Lernens wird einem Programm durch das Zeigen von Beispielen mit den richtigen Antworten beigebracht.
+- Es funktioniert genauso, als würde ein Lehrer oder Betreuer die Maschine anleiten. Man kann es sich wie das Trainieren einer Funktion vorstellen, bei dem sowohl die Eingabeparameter als auch die erwartete Ausgabe (Labels) bereitgestellt werden.
+- Der Algorithmus lernt, Eingaben und Ausgaben zuzuordnen, indem er gekennzeichnete Beispiele analysiert.
+- Wesentliche Merkmale:
+  - Beschriftete Datensätze: Jeder Datenpunkt verfügt über Eingabeeigenschaften sowie eine bekannte Ausgabe bzw. ein bekanntes Ziel.
+  - Trainingsprozess: Der Algorithmus passt seine Parameter iterativ an, um Vorhersagefehler zu minimieren.
+  - Validierung: Die Genauigkeit lässt sich durch einen Vergleich der Vorhersagen mit den tatsächlichen Antworten ermitteln.
+  - zwei Haupttypen:
+    - Klassifizierung: Vorhersage von Kategorien (z. B. Identifizierung, ob eine E-Mail Spam ist oder nicht, Bilderkennung).
+    - Regression: Vorhersage kontinuierlicher Werte (z. B. Aktien- oder Immobilienpreise).
+- Übliche Algorithmen: Lineare/Logistische Regression, Entscheidungsbäume, Random Forests, Support-Vektor-Maschinen und neuronale Netze.
+- Analogie: Eine Funktion lernt aus einem Trainingsdatensatz. Sie nimmt eine Eingabe und eine erwartete Ausgabe entgegen - ***funktion(Eingabe, erwartete_Ausgabe)*** und gibt die Ausgabe für eine neue Eingabe aus - ***funktion(neue_Eingabe) -> vorhergesagte Ausgabe***.
+- Zu den praktischen Beispielen zählen Empfehlungssysteme, Betrugserkennung und medizinische Diagnosen.
 
-## Unsupervised Learning
-- This type of machine learning is like letting a program discover patterns in data without being told what to look for.
-- Machine learning algorithms are used to analyze and cluster unlabeled data sets without human supervision.
-- Unsupervised machine learning models are given unlabeled data and allowed to discover patterns and insights without any explicit guidance or instruction.
-- Key characteristics:
-  - Unlabeled data: Only input data without any target outputs can be provided.
-  - Pattern discovery: The algorithm tries to make sense of data by extracting features and patterns on its own.
-  - Self-learning: Algorithms find hidden patterns and data without any human intervention.
-  - Exploration-focused: Discovering intrinsic structure or distribution of the data.
-- Main techniques:
-  - Clustering: Grouping similar data points (K-Means, Hierarchical Clustering, DBSCAN)
-  - Association Rules: Finding relationships between data items (market basket analysis)
-  - Dimensionality Reduction: Simplifying datasets while preserving essential information (PCS, t-SNE)
-- Analogy: Giving a function only input data ***function(input_data)*** and letting it discover groups, patterns, or reduced representations without knowing what the "correct" answer should be.
-- Practical examples: exploratory data analysis, anomaly detection, feature extraction, customer behavior analysis, data preprocessing
+## Unsupervised Learning (unüberwachtes Lernen)
+- Bei dieser Art des maschinellen Lernens ist ein Programm in der Lage, Muster in Daten zu erkennen, ohne dass ihm vorgegeben wird, wonach es suchen soll.
+- Algorithmen für maschinelles Lernen analysieren und gruppieren unbeschriftete Datensätze eigenständig und ohne menschliche Aufsicht.
+- Unüberwachte maschinelle Lernmodelle werden mit unbeschrifteten Daten konfrontiert. Sie können dann selbstständig Muster und Erkenntnisse identifizieren, ohne dass sie explizite Anweisungen oder Vorgaben erhalten.
+- Wesentliche Merkmale:
+  - Unbeschriftete Daten: Es können nur Eingabedaten ohne Zielausgaben bereitgestellt werden.
+  - Mustererkennung: Der Algorithmus interpretiert die Daten, indem er Merkmale und Muster unabhängig voneinander extrahiert.
+  - Selbstlernend: Die Algorithmen finden ohne menschliches Zutun versteckte Muster und Daten.
+  - Erkundungsorientiert: Es findet eine Entdeckung der intrinsischen Struktur oder Verteilung der Daten statt.
+- Haupttechniken:
+  - Clustering: hier werden ähnliche Datenpunkte gruppiert. Es gibt verschiedene Verfahren, K-Means-Clustering, hierarchisches Clustering und DBSCAN.
+  - Assoziationsregeln: Identifizierung von Beziehungen zwischen Datenelementen (z. B. Warenkorbanalyse).
+  - Dimensionsreduktion: Vereinfachung von Datensätzen unter Beibehaltung wesentlicher Informationen (z. B. PCS und t-SNE).
+- Analogie: Eine Funktion erhält Eingabedaten und muss daraus Gruppen, Muster oder reduzierte Darstellungen ableiten, ohne die „richtige” Antwort zu kennen.
+- Zu den praktischen Beispielen zählen explorative Datenanalyse, Anomalieerkennung, Merkmalsextraktion, Kundenverhaltensanalyse und Datenvorverarbeitung.
+
+### Neuronal Netze
+- Rechenmodelle, die komplexe Muster erkennen können.
+- Sie ahmen die Art und Weise nach, wie biologische Gehirne Informationen verarbeiten.
+- Man kann sie sich als hoch entwickelte Funktionsapproximationen vorstellen, die aus miteinander verbundenen Verarbeitungseinheiten (Neuronen) bestehen, welche wiederum in Schichten organisiert sind.
+- Jedes Neuron empfängt numerische Eingaben, wendet Gewichte (wie Koeffizienten) und Vorspannungen an und leitet das Ergebnis dann durch eine Aktivierungsfunktion weiter, die für Nichtlinearität sorgt.
+- Das Netzwerk lernt, indem es diese Gewichte und Vorspannungen durch einen Trainingsprozess namens „Backpropagation” anpasst.
+- Dabei vergleicht es seine Vorhersagen mit den richtigen Antworten und aktualisiert die Parameter iterativ, um Fehler zu minimieren.
+- Im Gegensatz zur traditionellen Programmierung, bei der explizite Regeln geschrieben werden, entdecken neuronale Netze Regeln automatisch aus Daten.
+- Während des Trainings werden Eingabe-Ausgabe-Beispiele vorgegeben und das Netzwerk lernt die zugrunde liegende Funktion, die Eingaben zu Ausgaben zuordnet.
+- Dies macht sie für Aufgaben wie Bilderkennung, Verarbeitung natürlicher Sprache und Mustererkennung unglaublich leistungsfähig, bei denen das Schreiben expliziter Regeln unmöglich wäre.
+- Der Begriff „neuronal” ist dabei nur inspirierend – im Wesentlichen handelt es sich um ausgefeilte mathematische Funktionen, die bei ausreichender Datenmenge und Rechenleistung jede komplexe Beziehung lernen können.
