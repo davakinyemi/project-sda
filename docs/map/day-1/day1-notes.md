@@ -52,3 +52,34 @@
   - Kreatives Schreiben: Eine höhere Temperatur (0,7–0,9) kann verwendet werden, um vielfältigere und kreativere Ergebnisse zu erzielen.
   - Sachfragen: Eine niedrige Temperatur führt zu konsistenten, genauen Antworten.
   - Brainstorming: Eine höhere Temperatur kann verwendet werden, um vielfältige Ideen zu generieren.
+
+## Supervised Learning
+- This type of machine learning is like teaching a program by showing it examples with correct answers.
+- It works like having a teacher or supervisor guiding the machine, and can be taught of as training a function where both input parameters and the expected output (labels) are provided.
+- The algorithm learns to map inputs to outputs by analyzing these labeled examples.
+- Key characteristics:
+  - Labeled datasets: Each data point has both input features and a known output/target.
+  - Training process: The algorithm iteratively adjusts its parameters to minimize prediction errors.
+  - Validation: Accuracy can be measured by comparing predictions against known correct answers.
+  - Two main types:
+    - Classification: Predicting categories (e.g. spam vs. not spam, image recognition)
+    - Regression: Predicting continuous values (e.g. stock prices, housing prices)
+- Common algorithms: Linear/Logistic Regression, Decision Trees, Random Forest, Support Vector Machines, Neural Networks
+- Analogy: Writing a function that learns from a training dataset ***function(input, expected_output)*** to later predict ***function(new_input) -> predicted output.***
+- Practical examples: recommendation systems, fraud detection, medical diagnosis
+
+## Unsupervised Learning
+- This type of machine learning is like letting a program discover patterns in data without being told what to look for.
+- Machine learning algorithms are used to analyze and cluster unlabeled data sets without human supervision.
+- Unsupervised machine learning models are given unlabeled data and allowed to discover patterns and insights without any explicit guidance or instruction.
+- Key characteristics:
+  - Unlabeled data: Only input data without any target outputs can be provided.
+  - Pattern discovery: The algorithm tries to make sense of data by extracting features and patterns on its own.
+  - Self-learning: Algorithms find hidden patterns and data without any human intervention.
+  - Exploration-focused: Discovering intrinsic structure or distribution of the data.
+- Main techniques:
+  - Clustering: Grouping similar data points (K-Means, Hierarchical Clustering, DBSCAN)
+  - Association Rules: Finding relationships between data items (market basket analysis)
+  - Dimensionality Reduction: Simplifying datasets while preserving essential information (PCS, t-SNE)
+- Analogy: Giving a function only input data ***function(input_data)*** and letting it discover groups, patterns, or reduced representations without knowing what the "correct" answer should be.
+- Practical examples: exploratory data analysis, anomaly detection, feature extraction, customer behavior analysis, data preprocessing
