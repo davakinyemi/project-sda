@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hello-ai-application
+  ai:
+    openai:
+      api-key: ${HELLO_AI}
+      chat:
+        options:
+          model: gpt-5-nano
+          temperature: 1.0
+
+logging:
+  level:
+    org:
+      springframework:
+        ai: DEBUG

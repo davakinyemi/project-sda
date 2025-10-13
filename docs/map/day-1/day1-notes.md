@@ -9,7 +9,7 @@
 
 ### Token:
 - Tokens sind die grundlegenden Texteinheiten, die LLMs verarbeiten – die „atomaren Elemente“ der Sprache für das Modell. So wie eine Zeichenfolge durch Aufteilung anhand von Leer- oder Trennzeichen in Tokens zerlegt werden kann, zerlegen LLMs Text auf komplexere Weise in kleinere Einheiten.
-  - Ein Token kann ein ganzes Wort („Hallo“), ein Wortteil („ing“), ein Satzzeichen (‚,‘) oder sogar ein Leerzeichen sein.
+  - Ein Token kann ein ganzes Wort („Hallo“), ein Wortteil („ing“), ein Satzzeichen (‚, ‘) oder sogar ein Leerzeichen sein.
   - Die meisten modernen LLMs verwenden Algorithmen wie das Byte Pair Encoding (BPE), um aus häufig vorkommenden Zeichenfolgen Token zu erstellen.
   - Da verschiedene Modelle unterschiedliche Tokenizer verwenden, kann derselbe Text unterschiedlich aufgeteilt werden.
 - Die Tokenisierung lässt sich mit der Analyse von Quellcode vergleichen. So wie ein Compiler Code in lexikalische Token (wie Schlüsselwörter, Bezeichner und Operatoren) zerlegt, zerlegt ein LLM natürliche Sprache in semantische Token.
@@ -64,8 +64,8 @@
   - zwei Haupttypen:
     - Klassifizierung: Vorhersage von Kategorien (z. B. Identifizierung, ob eine E-Mail Spam ist oder nicht, Bilderkennung).
     - Regression: Vorhersage kontinuierlicher Werte (z. B. Aktien- oder Immobilienpreise).
-- Übliche Algorithmen: Lineare/Logistische Regression, Entscheidungsbäume, Random Forests, Support-Vektor-Maschinen und neuronale Netze.
-- Analogie: Eine Funktion lernt aus einem Trainingsdatensatz. Sie nimmt eine Eingabe und eine erwartete Ausgabe entgegen - ***funktion(Eingabe, erwartete_Ausgabe)*** und gibt die Ausgabe für eine neue Eingabe aus - ***funktion(neue_Eingabe) -> vorhergesagte Ausgabe***.
+- Übliche Algorithmen: Lineare/Logistische Regression, Entscheidungsbäume, random Forests, Support-Vektor-Maschinen und neuronale Netze.
+- Analogie: Eine Funktion lernt aus einem Trainingsdatensatz. Sie nimmt eine Eingabe und eine erwartete Ausgabe entgegen - ***funktion (Eingabe, erwartete_Ausgabe)*** und gibt die Ausgabe für eine neue Eingabe aus - ***funktion (neue_Eingabe) > vorhergesagte Ausgabe***.
 - Zu den praktischen Beispielen zählen Empfehlungssysteme, Betrugserkennung und medizinische Diagnosen.
 
 ## Unsupervised Learning (unüberwachtes Lernen)
@@ -75,7 +75,7 @@
 - Wesentliche Merkmale:
   - Unbeschriftete Daten: Es können nur Eingabedaten ohne Zielausgaben bereitgestellt werden.
   - Mustererkennung: Der Algorithmus interpretiert die Daten, indem er Merkmale und Muster unabhängig voneinander extrahiert.
-  - Selbstlernend: Die Algorithmen finden ohne menschliches Zutun versteckte Muster und Daten.
+  - Selbstlernend: Die Algorithmen finden, ohne menschliches Zutun versteckte Muster und Daten.
   - Erkundungsorientiert: Es findet eine Entdeckung der intrinsischen Struktur oder Verteilung der Daten statt.
 - Haupttechniken:
   - Clustering: hier werden ähnliche Datenpunkte gruppiert. Es gibt verschiedene Verfahren, K-Means-Clustering, hierarchisches Clustering und DBSCAN.
@@ -84,9 +84,9 @@
 - Analogie: Eine Funktion erhält Eingabedaten und muss daraus Gruppen, Muster oder reduzierte Darstellungen ableiten, ohne die „richtige” Antwort zu kennen.
 - Zu den praktischen Beispielen zählen explorative Datenanalyse, Anomalieerkennung, Merkmalsextraktion, Kundenverhaltensanalyse und Datenvorverarbeitung.
 
-### Neuronal Netze
+### Neuronale Netze
 - Rechenmodelle, die komplexe Muster erkennen können.
-- Sie ahmen die Art und Weise nach, wie biologische Gehirne Informationen verarbeiten.
+- Sie ahnen die Art und Weise nach, wie biologische Gehirne Informationen verarbeiten.
 - Man kann sie sich als hoch entwickelte Funktionsapproximationen vorstellen, die aus miteinander verbundenen Verarbeitungseinheiten (Neuronen) bestehen, welche wiederum in Schichten organisiert sind.
 - Jedes Neuron empfängt numerische Eingaben, wendet Gewichte (wie Koeffizienten) und Vorspannungen an und leitet das Ergebnis dann durch eine Aktivierungsfunktion weiter, die für Nichtlinearität sorgt.
 - Das Netzwerk lernt, indem es diese Gewichte und Vorspannungen durch einen Trainingsprozess namens „Backpropagation” anpasst.
@@ -95,3 +95,28 @@
 - Während des Trainings werden Eingabe-Ausgabe-Beispiele vorgegeben und das Netzwerk lernt die zugrunde liegende Funktion, die Eingaben zu Ausgaben zuordnet.
 - Dies macht sie für Aufgaben wie Bilderkennung, Verarbeitung natürlicher Sprache und Mustererkennung unglaublich leistungsfähig, bei denen das Schreiben expliziter Regeln unmöglich wäre.
 - Der Begriff „neuronal” ist dabei nur inspirierend – im Wesentlichen handelt es sich um ausgefeilte mathematische Funktionen, die bei ausreichender Datenmenge und Rechenleistung jede komplexe Beziehung lernen können.
+
+
+# Day 1 Completion Checklist
+
+## AI Fundamentals ✓
+- [x] Understand AI vs ML vs LLM differences
+- [x] Know what tokens, prompts, completions are
+- [x] Understand supervised vs unsupervised learning
+- [x] Have basic neural network mental model
+
+## Technical Implementation ✓
+- [x] Created Spring Boot project with Spring AI
+- [x] Configured OpenAI API integration
+- [x] Built working /hello-ai endpoint
+- [x] Added error handling and logging
+- [x] Tested with multiple different prompts
+
+## Working Endpoints
+- http://localhost:8080/hello-ai
+- http://localhost:8080/health
+
+## What I Can Do Now
+- Send text prompts to AI and get responses
+- Handle AI API errors gracefully
+- Log AI interactions for debugging
