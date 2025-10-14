@@ -1,0 +1,24 @@
+package com.projectsda.hello_ai.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class ChatRequestWithOptions extends ChatRequest {
+
+    @JsonProperty("temperature")
+    private double temperature = 1.0;
+
+    @JsonProperty("max_tokens")
+    private int maxTokens = 150;
+
+    public ChatRequestWithOptions(String question, double temperature, int maxTokens) {
+        super(question);
+        this.temperature = temperature;
+        this.maxTokens = maxTokens;
+    }
+
+}
