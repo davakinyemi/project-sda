@@ -4,14 +4,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HelloAiController {
 
-    private static final Logger logger = LoggerFactory.getLogger(HelloAiController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(HelloAiController.class);
     private final ChatClient chatClient;
 
     public HelloAiController(ChatClient.Builder chatClientBuilder) {
@@ -23,18 +23,18 @@ public class HelloAiController {
             @RequestParam(defaultValue = "Hello") String message
     ) {
         try {
-            logger.info("Processing AI request with message: {}", message);
+            LOGGER.info("Processing AI request with message: {}", message);
 
             String response = chatClient.prompt()
                     .user(message)
                     .call()
                     .content();
 
-            logger.info("AI response received successfully");
+            LOGGER.info("AI response received successfully");
             return ResponseEntity.ok(response);
 
         } catch (Exception e) {
-            logger.error("Error processing AI request: {}", e.getMessage());
+            LOGGER.error("Error processing AI request: {}", e.getMessage());
             return ResponseEntity.internalServerError()
                     .body("Sorry, I'm having trouble processing your request right now.");
         }
