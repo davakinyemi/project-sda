@@ -35,20 +35,20 @@ public class OpenAiChatService implements ChatService {
     }
 
     @Override
-    public String generatedResponseWithOptions(String prompt, double temperature, int maxTokens) {
-        LOGGER.info("Generating response with custom options - temp: {}, maxTokens: {}", temperature, maxTokens);
+    public String generatedResponseWithOptions(String prompt, double temperature, int maxCompletionTokens) {
+        LOGGER.info("Generating response with custom options - temp: {}, maxCompletionTokens: {}", temperature, maxCompletionTokens);
 
         try {
             String response = chatClient.prompt()
                     .user(prompt)
                     .options(OpenAiChatOptions.builder()
                             .temperature(temperature)
-                            .maxTokens(maxTokens)
+                            .maxCompletionTokens(maxCompletionTokens)
                             .build())
                     .call()
                     .content();
 
-            LOGGER.info("Successfully generated response with custom options");
+            LOGGER.info("Successfully generated response with custom options: {}", response);
             return response;
 
         } catch (Exception e) {

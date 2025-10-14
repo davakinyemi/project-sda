@@ -12,13 +12,13 @@ public class ChatRequestWithOptions extends ChatRequest {
     @JsonProperty("temperature")
     private double temperature = 1.0;
 
-    @JsonProperty("max_tokens")
-    private int maxTokens = 150;
+    @JsonProperty("max_completion_tokens")
+    private int maxCompletionTokens = 150;
 
-    public ChatRequestWithOptions(String question, double temperature, int maxTokens) {
+    public ChatRequestWithOptions(String question, double temperature, int maxCompletionTokens) {
         super(question);
         this.temperature = temperature;
-        this.maxTokens = maxTokens;
+        this.maxCompletionTokens = maxCompletionTokens;
     }
 
 }

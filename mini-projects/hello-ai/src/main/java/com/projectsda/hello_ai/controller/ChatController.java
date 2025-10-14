@@ -56,7 +56,7 @@ public class ChatController {
             String response = chatService.generatedResponseWithOptions(
                     request.getQuestion(),
                     request.getTemperature(),
-                    request.getMaxTokens()
+                    request.getMaxCompletionTokens()
             );
             ChatResponse chatResponse = ChatResponse.builder()
                     .answer(response)
