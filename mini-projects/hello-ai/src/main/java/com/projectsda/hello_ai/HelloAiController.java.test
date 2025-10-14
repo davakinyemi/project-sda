@@ -40,7 +40,7 @@ public class HelloAiController {
         }
     }
 
-    @GetMapping("/health")
+    @GetMapping("/health-old")
     public ResponseEntity<String> health() {
         return ResponseEntity.ok("AI service is running");
     }
