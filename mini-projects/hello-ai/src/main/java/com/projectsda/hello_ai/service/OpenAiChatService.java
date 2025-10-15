@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.openai.OpenAiChatOptions;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClientException;
@@ -19,6 +20,7 @@ public class OpenAiChatService implements ChatService {
     private final ChatClient chatClient;
 
     @Override
+    @Cacheable(value = "chat-responses", key = "#prompt")
     public String generateResponse(String prompt) {
         validatePrompt(prompt);
 
@@ -53,6 +55,7 @@ public class OpenAiChatService implements ChatService {
     }
 
     @Override
+    @Cacheable(value = "chat-custom-responses", key = "#prompt + '_' + #temperature + '_' + #maxCompletionTokens")
     public String generatedResponseWithOptions(String prompt, double temperature, int maxCompletionTokens) {
         validatePrompt(prompt);
         validateOptions(temperature, maxCompletionTokens);
@@ -104,8 +107,8 @@ public class OpenAiChatService implements ChatService {
         if (temperature < 1.0 || temperature > 1.0) {
             throw new IllegalArgumentException("For current mode gpt-5-nano, temperature must be 1.0");
         }
-        if (maxCompletionTokens < 1 || maxCompletionTokens > 4000) {
-            throw new IllegalArgumentException("Max completion tokens must be between approx. 200 and less than 4000");
+        if (maxCompletionTokens < 500 || maxCompletionTokens > 4000) {
+            throw new IllegalArgumentException("Max completion tokens must be between 500 and less than 4000");
         }
     }
 }

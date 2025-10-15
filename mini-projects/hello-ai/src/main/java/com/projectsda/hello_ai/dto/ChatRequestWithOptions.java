@@ -19,7 +19,7 @@ public class ChatRequestWithOptions extends ChatRequest {
     private double temperature = 1.0;
 
     @JsonProperty("max_completion_tokens")
-    @Min(value = 100, message = "Max completion tokens must be at least 100")
+    @Min(value = 500, message = "Max completion tokens must be at least 500")
     @Max(value = 4000, message = "Max completion tokens cannot exceed 4000")
     private int maxCompletionTokens = 150;
 
