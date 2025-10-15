@@ -4,6 +4,7 @@ import com.projectsda.hello_ai.dto.ChatRequest;
 import com.projectsda.hello_ai.dto.ChatRequestWithOptions;
 import com.projectsda.hello_ai.dto.ChatResponse;
 import com.projectsda.hello_ai.service.ChatService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +23,7 @@ public class ChatController {
 
     @PostMapping("/ask")
     public ResponseEntity<ChatResponse> askQuestion(
-            @RequestBody ChatRequest request
+            @Valid @RequestBody ChatRequest request
     ) {
         LOGGER.info("Received chat request: {}", request.getQuestion());
 
@@ -48,7 +49,7 @@ public class ChatController {
 
     @PostMapping("/ask-custom")
     public ResponseEntity<ChatResponse> askWithOptions(
-            @RequestBody ChatRequestWithOptions request
+            @Valid @RequestBody ChatRequestWithOptions request
     ) {
         LOGGER.info("Received chat request with options: {}", request);
 
