@@ -38,3 +38,15 @@ How do I declare a string variable for a first name?
 var first_name = "Anna";
 </assistant_response>
 ```
+
+## Token and Parameter Testing Results
+### Temperature Effects:
+- 0.1 (deterministic): [consistent response]
+- 0.5 (balanced): [moderate variation]
+- 0.9 (creative): [high variation response]
+
+### Token Observations:
+- Short prompt (~10 tokens): [short length response]
+- Medium prompt (~30 tokens): [medium length response]
+- Long prompt (~60 tokens): [long length response]
+- Rule of thumb: 1 token = approx. 4 characters in English
